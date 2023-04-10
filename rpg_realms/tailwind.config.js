@@ -7,12 +7,16 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: 'class',
+  
   theme: {
     extend: {
       colors: {
-        primary: '#202225',
-        secondary: '#5865f2',
+        primary: '#237D52',
+        primarycontainer:'#D1E8D6',
+        secondary: '#92F7BC',
+        tertiary: '#3B6471',
+        tertiarycontainer:'#BFE9F8',
+        surface:  '#002111'
       }
     },
   },

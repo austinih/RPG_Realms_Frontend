@@ -1,8 +1,8 @@
-export default function Profile() {
+export default function RPGDetails() {
     return(
        
        <div >
-            <h1>Profile</h1>
+            <h1>RPG</h1>
             
             
         </div>

@@ -3,6 +3,11 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Login from './components/LogIn';
+import {Routes, Route} from 'react-router-dom'
+import Register from './components/Register';
+import Profile from './components/Profile';
+import RPGDetails from './components/RPGDetails';
 
 function App() {
   return (
@@ -12,7 +17,15 @@ function App() {
 
       </header>
       <main className="App-main">
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/rpg/:rpgId" element={<RPGDetails/>}/>
+
+
+        </Routes>
       </main>
       <footer className="App-main">
         <Footer />

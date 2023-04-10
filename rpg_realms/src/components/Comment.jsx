@@ -1,8 +1,8 @@
-export default function Profile() {
+export default function Comment() {
     return(
        
        <div >
-            <h1>Profile</h1>
+            <h1>comment</h1>
             
             
         </div>

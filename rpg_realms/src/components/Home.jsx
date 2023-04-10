@@ -19,7 +19,7 @@ export default function Home() {
     
     return publisher && publisher.rpgs ? (
        
-       <div className="home-container">
+       <div >
             <h1>Home</h1>
             <h3>RPG Title: {publisher.rpgs[0].title}</h3>
             <p>{publisher.rpgs[0].description} ---- Publisher Description</p>

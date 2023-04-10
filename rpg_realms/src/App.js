@@ -8,26 +8,32 @@ import {Routes, Route} from 'react-router-dom'
 import Register from './components/Register';
 import Profile from './components/Profile';
 import RPGDetails from './components/RPGDetails';
+import CreateReview from './components/CreateReview';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div >
+      <header >
         <Header />
 
       </header>
-      <main className="App-main">
+      <main >
+      {/* <h1 className="text-3xl font-bold underline text-red-600 bg-purple-200">
+      Hello world!
+    </h1> */}
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>}/>
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/rpg/:rpgId" element={<RPGDetails/>}/>
+          <Route path="/createreview" element={<CreateReview/>}/>
+
 
 
         </Routes>
       </main>
-      <footer className="App-main">
+      <footer >
         <Footer />
       </footer>
     </div>

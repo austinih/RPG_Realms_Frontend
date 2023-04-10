@@ -7,7 +7,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  
+  // minmain: 80vh,
   theme: {
     extend: {
       colors: {

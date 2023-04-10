@@ -17,10 +17,8 @@ function App() {
         <Header />
 
       </header>
-      <main >
-      {/* <h1 className="text-3xl font-bold underline text-red-600 bg-purple-200">
-      Hello world!
-    </h1> */}
+      <main className='mx-12 my-5 min-h-[70vh]'>
+     
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />

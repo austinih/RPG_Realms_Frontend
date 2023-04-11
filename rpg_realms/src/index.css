@@ -18,5 +18,9 @@
                 text-xs font-bold
                 transition-all duration-100 scale-0 origin-left;
     }
+    .input-field {
+        @apply  w-60 ml-4 my-2 px-4 py-1 rounded-2xl
+                bg-primarycontainer text-surface 
+    }
 
 }

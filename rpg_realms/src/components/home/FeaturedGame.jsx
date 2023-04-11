@@ -32,7 +32,7 @@ export default function FeaturedGame() {
                     <p className="text-lg ">{publisher.rpgs[0].description} </p>
                     <p className="float-right">---- Publisher Description</p>
                     <br></br>
-                    <button className=" mt-1 px-2 py-1 rounded-3xl float-right bg-tertiarycontainer text-surface hover:bg-tertiary hover:text-white border-solid border-2 border-surface hover:border-white">
+                    <button className=" mt-1 px-2 py-1 rounded-3xl float-right bg-tertiary text-white hover:bg-tertiarycontainer hover:text-surface border-solid border-2 border-surface hover:border-surface">
                         Learn More
                     </button>
                 </div>

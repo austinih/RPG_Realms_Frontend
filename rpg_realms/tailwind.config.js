@@ -16,7 +16,8 @@ module.exports = {
         secondary: '#92F7BC',
         tertiary: '#3B6471',
         tertiarycontainer:'#BFE9F8',
-        surface:  '#002111'
+        surface:  '#002111',
+        lightsurface: '#F8F3F3',
       }
     },
   },

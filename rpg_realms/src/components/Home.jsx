@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import FeaturedGame from "./FeaturedGame";
 
 export default function Home() {
     
@@ -19,19 +20,10 @@ export default function Home() {
     
     return publisher && publisher.rpgs ? (
        
-       <div >
-            <h1>Home</h1>
-            <h3>RPG Title: {publisher.rpgs[0].title}</h3>
-            <p>{publisher.rpgs[0].description} ---- Publisher Description</p>
-            <h5>{publisher.rpgs[0].genre}</h5>
-            <img src={publisher.rpgs[0].image_url} style={{width:'150px'}}></img>
-            <h3>Publisher: {publisher.name}</h3>
-            <a href={publisher.website_url} target="_blank">Publisher Website</a>
-            <img src={publisher.logo_url} style={{width:'150px'}}></img>
-            
-            
-            
-        </div>
+      <div >
+        <FeaturedGame/>
+
+      </div>
         
     ) : <h1> Loading, Please Wait</h1>
 

@@ -17,7 +17,7 @@ function App() {
         <Header />
 
       </header>
-      <main className='mx-12 my-5 min-h-[70vh]'>
+      <main className='mx-20 my-5 min-h-[70vh]'>
      
         <Routes>
           <Route path="/" element={<Home/>} />

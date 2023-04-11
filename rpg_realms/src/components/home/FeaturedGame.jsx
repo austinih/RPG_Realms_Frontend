@@ -23,7 +23,7 @@ export default function FeaturedGame() {
             <div className="w-[70vw] ml-auto mr-auto">
               <h3 className="py-2  bg-primary text-white text-center text-2xl ">Featured Game</h3>
               <div className=" flex self-center  px-8 py-5 bg-primarycontainer">
-                <img className="max-w-xs max-h-[60vh] mr-8 " src={publisher.rpgs[0].image_url} ></img>
+                <img className="max-w-xs max-h-[50vh] mr-8 " src={publisher.rpgs[0].image_url} ></img>
                 <div>
                     <h3 className="text-5xl mb-1">{publisher.rpgs[0].title}</h3>
                     <h3 className="text-xl font-bold" >Published by: {publisher.name}</h3>

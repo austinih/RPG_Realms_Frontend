@@ -1,5 +1,5 @@
 import { BsFillLightningFill, BsGearFill } from 'react-icons/bs'
-import { FaSignInAlt,FaSignOutAlt,FaPlus, FaFire, FaUserPlus,FaUser } from 'react-icons/fa'
+import { FaHome,FaSignInAlt,FaSignOutAlt,FaPlus, FaFire, FaUserPlus,FaUser } from 'react-icons/fa'
 import { Link } from "react-router-dom"
 
 export default function NavBar() {
@@ -8,6 +8,9 @@ export default function NavBar() {
         {/* <h1 className='text-3xl'>RPG Realms</h1> */}
         <div className=" w-auto flex flex-row justify-evenly mr-4 " >
             
+            <Link to='/'>
+                <NavBarIcon icon={<FaHome size="28" />} text={"Home"}/>
+            </Link>
             <Link to='/login'>
                 <NavBarIcon icon={<FaSignInAlt size="28" />} text={"Log In"}/>
             </Link>

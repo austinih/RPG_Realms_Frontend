@@ -8,12 +8,12 @@ export default function Profile() {
                 <div className="w-80">
                     <ul>
                         <li>Name 
-                            <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-gray-300 text-surface">Austin Holland</div>  
+                            <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-primarycontainer text-surface">Austin Holland</div>  
                         </li>
                         <li>Username</li>
-                            <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-gray-300 text-surface">fakeaustin</div>  
+                            <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-primarycontainer text-surface">fakeaustin</div>  
                         <li>Email</li>
-                        <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-gray-300 text-surface">austin@fake.com</div>  
+                        <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-primarycontainer text-surface">austin@fake.com</div>  
                     </ul>
                     <button className=" mt-4 px-4  rounded-3xl float-right shadow-lg bg-tertiary text-white hover:bg-tertiarycontainer hover:text-surface">Edit</button>
                 </div>

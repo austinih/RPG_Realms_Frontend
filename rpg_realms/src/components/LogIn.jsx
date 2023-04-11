@@ -41,7 +41,7 @@ export default function Login() {
                         required
                     />
                 </div>
-                <button className="mt-2 px-3 py-1 rounded-3xl float-right bg-tertiary text-white"
+                <button className="buttons"
                     disabled={!formValues.email || !formValues.password}
                     >Log In
                 </button>

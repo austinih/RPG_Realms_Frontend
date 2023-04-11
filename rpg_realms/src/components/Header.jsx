@@ -22,12 +22,12 @@ export default function Header() {
                         // value={search.formInput}
                         // onChange={handleChange}
                     />
-                    <button className="px-3 py-2 -ml-4 rounded-r-2xl text-white bg-primary hover:bg-secondary hover:text-primary">
+                    <button className="px-3 py-2 -ml-4 rounded-r-2xl text-white bg-primary hover:bg-secondary hover:text-primary ">
                         {<FaSearch size="20"></FaSearch>}
                     </button>
-                    <button className="rounded-3xl bg-tertiary text-white hover:bg-tertiarycontainer hover:text-surface font-bold px-2 ml-6 ">All RPGs</button>
-                    <button className="rounded-3xl bg-tertiary text-white hover:bg-tertiarycontainer hover:text-surface font-bold px-2 ml-6 shadow-sm shadow-white">Genres</button>
-                    <button className="rounded-3xl bg-tertiary text-white hover:bg-tertiarycontainer hover:text-surface font-bold px-2 ml-6 shadow-inner shadow-slate-900">Publishers</button>
+                    <button className="game-filters">All RPGs</button>
+                    <button className="game-filters">Genres</button>
+                    <button className="game-filters">Publishers</button>
                 </div>
                
             </div>

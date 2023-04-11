@@ -39,7 +39,7 @@ export default function Register() {
        
         <div className="w-72 m-auto " >
             <h1 className="text-3xl text-center mb-3">Register</h1>
-            <form className="w-72 h-[27rem] p-4 shadow-2xl">
+            <form className="w-72 h-[28rem] p-4 shadow-2xl">
                 <div>
                     <label htmlFor="name" className="flex">Name:</label>
                     <input className="input-field"
@@ -95,7 +95,7 @@ export default function Register() {
                         required
                     />
                 </div>
-                <button className="mt-2 px-3 py-1 rounded-3xl float-right bg-tertiary text-white"
+                <button className="buttons"
                     disabled={
                         !formValues.email ||
                         (!formValues.password &&

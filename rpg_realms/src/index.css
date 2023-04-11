@@ -18,6 +18,18 @@
                 text-xs font-bold
                 transition-all duration-100 scale-0 origin-left;
     }
+    .game-filters {
+        @apply  rounded-3xl bg-tertiary text-white 
+                hover:bg-tertiarycontainer   hover:text-surface 
+                font-bold px-2 ml-6 
+                hover:rounded-xl transition-all duration-300 ease-linear
+    }
+    .buttons {
+        @apply  rounded-3xl bg-tertiary text-white 
+                hover:bg-tertiarycontainer   hover:text-surface 
+                font-bold mt-4 px-4 py-1 float-right
+                hover:rounded-xl transition-all duration-300 ease-linear
+    }
     .input-field {
         @apply  w-60 ml-4 my-2 px-4 py-1 rounded-2xl
                 bg-primarycontainer text-surface 

@@ -20,7 +20,7 @@ export default function FeaturedGame() {
     return publisher && publisher.rpgs ? (
        
        <div >
-            <div className="w-[70vw] ml-auto mr-auto">
+            <div className="w-[70vw] ml-auto mr-auto drop-shadow-xl shadow-slate-900 ">
               <h3 className="py-2  bg-primary text-white text-center text-2xl ">Featured Game</h3>
               <div className=" flex self-center  px-8 py-5 bg-primarycontainer">
                 <img className="max-w-xs max-h-[50vh] mr-8 " src={publisher.rpgs[0].image_url} ></img>
@@ -32,7 +32,7 @@ export default function FeaturedGame() {
                     <p className="text-lg ">{publisher.rpgs[0].description} </p>
                     <p className="float-right">---- Publisher Description</p>
                     <br></br>
-                    <button className=" mt-1 px-2 py-1 rounded-3xl float-right bg-tertiary text-white hover:bg-tertiarycontainer hover:text-surface border-solid border-2 border-surface hover:border-surface">
+                    <button className=" mt-1 px-2 py-1 rounded-3xl float-right bg-tertiary text-white hover:bg-tertiarycontainer hover:text-surface shadow-md shadow-slate-900">
                         Learn More
                     </button>
                 </div>

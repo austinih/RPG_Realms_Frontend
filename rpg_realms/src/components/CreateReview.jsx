@@ -2,7 +2,7 @@ export default function CreateReview() {
     return(
        
        <div >
-            <h1>comment</h1>
+            <h1>New Review</h1>
             
             
         </div>

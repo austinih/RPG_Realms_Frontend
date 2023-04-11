@@ -6,7 +6,7 @@ export default function NavBar() {
     return(
        <div>
         {/* <h1 className='text-3xl'>RPG Realms</h1> */}
-        <div className=" w-auto flex flex-row justify-evenly mr-3 " >
+        <div className=" w-auto flex flex-row justify-evenly mr-4 " >
             
             <Link to='/login'>
                 <NavBarIcon icon={<FaSignInAlt size="28" />} text={"Log In"}/>

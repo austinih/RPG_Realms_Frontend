@@ -1,6 +1,7 @@
 import { BsFillLightningFill, BsGearFill } from 'react-icons/bs'
 import { FaHome,FaSignInAlt,FaSignOutAlt,FaPlus, FaFire, FaUserPlus,FaUser } from 'react-icons/fa'
 import { Link } from "react-router-dom"
+import LoginModal from './Login/LogInModal';
 
 export default function NavBar() {
     return(
@@ -14,6 +15,7 @@ export default function NavBar() {
             <Link to='/login'>
                 <NavBarIcon icon={<FaSignInAlt size="28" />} text={"Log In"}/>
             </Link>
+           
             <Link to='/register'>
                 <NavBarIcon icon={<FaUserPlus size="28" />} text={"Register"}/>
             </Link>

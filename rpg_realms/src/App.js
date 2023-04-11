@@ -3,12 +3,12 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/home/Home';
-import Login from './components/LogIn';
 import {Routes, Route} from 'react-router-dom'
 import Register from './components/Register';
 import Profile from './components/Profile';
 import RPGDetails from './components/RPGDetails';
 import CreateReview from './components/CreateReview';
+import Login from './components/Login/LogIn';
 
 function App() {
   return (

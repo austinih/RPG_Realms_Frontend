@@ -13,13 +13,13 @@ import AllRPGs from './components/pages/AllRPGs';
 
 function App() {
   return (
-    <div >
+    <div className='bg-lightsurface'>
       <header >
         <Header />
 
       </header>
-      <main className='mx-20 my-5 min-h-[70vh]'>
-     
+      <main className='mx-20 my-5 min-h-[70vh] shadow-2xl'>
+      <br></br>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />

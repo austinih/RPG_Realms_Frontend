@@ -18,17 +18,17 @@ function App() {
         <Header />
 
       </header>
-      <main className='mx-20 my-5 min-h-[70vh] shadow-2xl'>
+      <main className='mx-20 my-5 min-h-[70vh] shadow-2xl bg-white'>
       <br></br>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>}/>
           <Route path="/profile" element={<Profile/>}/>
-          <Route path="/rpg/:rpgId" element={<RPGDetails/>}/>
+          <Route path="/rpgs/:rpgId" element={<RPGDetails/>}/>
           <Route path="/createreview" element={<CreateReview/>}/>
           <Route path="/allrpgs" element={<AllRPGs/>}/>
-
+          
 
 
         </Routes>

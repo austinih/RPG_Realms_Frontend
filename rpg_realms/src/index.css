@@ -19,7 +19,7 @@
                 transition-all duration-100 scale-0 origin-left;
     }
     .game-filters {
-        @apply  rounded-3xl bg-tertiary text-white 
+        @apply  rounded-3xl flex bg-tertiary text-white 
                 hover:bg-tertiarycontainer   hover:text-surface 
                 font-bold px-2 ml-6 
                 hover:rounded-xl transition-all duration-300 ease-linear

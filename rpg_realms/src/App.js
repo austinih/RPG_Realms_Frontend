@@ -9,6 +9,7 @@ import Profile from './components/Profile';
 import RPGDetails from './components/RPGDetails';
 import CreateReview from './components/CreateReview';
 import Login from './components/Login/LogIn';
+import AllRPGs from './components/pages/AllRPGs';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/rpg/:rpgId" element={<RPGDetails/>}/>
           <Route path="/createreview" element={<CreateReview/>}/>
+          <Route path="/allrpgs" element={<AllRPGs/>}/>
 
 
 

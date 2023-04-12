@@ -25,9 +25,15 @@ export default function Header() {
                     <button className="px-3 py-2 -ml-4 rounded-r-2xl text-white bg-primary hover:bg-secondary hover:text-primary ">
                         {<FaSearch size="20"></FaSearch>}
                     </button>
-                    <button className="game-filters">All RPGs</button>
-                    <button className="game-filters">Genres</button>
-                    <button className="game-filters">Publishers</button>
+                    <Link to='/allrpgs' className="game-filters" >
+                        <button >All RPGs</button>
+                    </Link >
+                    <Link  className="game-filters" >
+                        <button >Genres</button>
+                    </Link >
+                    <Link  className="game-filters" >
+                        <button >Publishers</button>
+                    </Link >
                 </div>
                
             </div>

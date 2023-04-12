@@ -24,12 +24,12 @@ export default function AllRPGs() {
        
         <div >
             <h1>All RPGs</h1>
-            <div className="flex">
+            <div className="flex flex-wrap">
                 {rpgs.map((rpg)=> (
-                    <div>
-                        <img src={rpg.image_url} className="w-44 h-48"></img>
-                        <p>{rpg.title}</p>
-                        <p>{rpg.genre}</p>
+                    <div className=" m-4">
+                        <img src={rpg.image_url} className="w-36 h-48"></img>
+                        <p className="text-sm">{rpg.title}</p>
+                        <p className="text-xs">{rpg.genre}</p>
                         
                     </div>
                 ))}

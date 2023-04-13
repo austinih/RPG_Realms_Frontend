@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 export default function AllRPGs() {
     
     const [rpgs, setRPGs] = useState([]);
+    const [search, setSearch] = useState({
+        searchBar: "",
+        formInput: "",
+        isSubmitted: false,
+      });
 
     useEffect(() => {
         const renderRPGs = async () => {
@@ -15,6 +20,35 @@ export default function AllRPGs() {
         renderRPGs();
       }, []);
     
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearch({
+          ...search,
+          [e.target.id]: e.target.value,
+          formInput: e.target.value,
+          isSubmitted: false,
+        });
+    };
+
+    const handleSubmit = (e) => {
+        // e.preventDefault();
+        setSearch({ ...search, isSubmitted: true })
+        console.log(search);
+    };
+
+    const filteredRPGs = search.isSubmitted
+    ? rpgs.filter((rpg) =>
+        rpg.title.toLowerCase().includes(search.formInput.toLowerCase())
+      )
+    : rpgs;
+
+
+    // https://reactgo.com/react-trigger-button-click/ - Used to allow ENTER key to call handlesubmit
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          handleSubmit()
+        }
+      };
     
     if (!rpgs) {
         return <h1> loading please wait</h1>
@@ -24,9 +58,23 @@ export default function AllRPGs() {
     return (
        
         <div >
+            <div className="search-box">
+                <input
+                type="text"
+                id="searchBar"
+                placeholder="Title Search....."
+                value={search.formInput}
+                onChange={handleChange}
+                onKeyUp={handleKeyDown}
+                />
+                <button className="search-btn"  onClick={handleSubmit}>
+                Search
+                </button>
+            </div>
+
             <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 rounded-r-3xl">Explore All RPGs</h1>
             <div className="flex flex-wrap justify-center ">
-                {rpgs.map((rpg)=> (
+                {filteredRPGs.map((rpg)=> (
                     <div className=" m-4 relative   overflow-hidden shadow-md shadow-slate-800 group">
                         <img src={rpg.image_url} className="relative w-48 h-60 rounded-t-md "></img>
                         <div className="  absolute w-48 py-1 px-2 bottom-0 inset-x-0 bg-white text-surface text-xs  leading-4 rounded-t-xl scale-0 group-hover:scale-100 opacity-100 text-center transition-all duration-300 ease-linear origin-bottom">

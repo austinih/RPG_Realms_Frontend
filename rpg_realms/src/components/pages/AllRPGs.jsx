@@ -1,6 +1,8 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { FaSearch } from 'react-icons/fa'
+
 
 export default function AllRPGs() {
     
@@ -58,21 +60,30 @@ export default function AllRPGs() {
     return (
        
         <div >
-            <div className="search-box">
-                <input
-                type="text"
-                id="searchBar"
-                placeholder="Title Search....."
-                value={search.formInput}
-                onChange={handleChange}
-                onKeyUp={handleKeyDown}
-                />
-                <button className="search-btn"  onClick={handleSubmit}>
-                Search
-                </button>
+            
+            <div className="flex items-center">
+                <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 rounded-r-3xl">Explore 
+                    All RPGs
+                </h1>
+                {/* Search Bar */}
+                <div className="m-auto">
+                    <input className="mx-4 w-96  px-3 py-1 rounded-l-2xl border-surface border-2"
+                        type="text"
+                        id="searchBar"
+                        placeholder="Title Search....."
+                        value={search.formInput}
+                        onChange={handleChange}
+                        onKeyUp={handleKeyDown}
+                    />
+                    <button className="px-3 py-2.5 -ml-4 rounded-r-2xl 
+                        text-white bg-primary hover:bg-secondary hover:text-primary border-surface border-r-2 border-t-2 border-b-2"  
+                        onClick={handleSubmit}>
+                        {<FaSearch size="12"></FaSearch>}
+                    </button>
+                </div>
+                {/* The h1 below is there purely to allow the search bar to be center screen */}
+                <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 -mr-3 opacity-0">Explore All RPGs</h1>
             </div>
-
-            <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 rounded-r-3xl">Explore All RPGs</h1>
             <div className="flex flex-wrap justify-center ">
                 {filteredRPGs.map((rpg)=> (
                     <div className=" m-4 relative   overflow-hidden shadow-md shadow-slate-800 group">

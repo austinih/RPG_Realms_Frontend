@@ -83,7 +83,7 @@ export default function RPGDetails() {
                                     </Link> */}
                                 </summary>
                                     {/* https://www.kindacode.com/article/tailwind-css-how-to-create-accordions-collapsible-content/ */}
-                                <div className="mx-5 mt-3 p-5 cursor-pointer border-2 border-primary">
+                                <div className="mx-5 mt-3 p-5  border-2 border-primary">
                                     <p></p>
                                     <p><span className="italic text-primary font-bold ">Review: </span>{review.content}</p>
                                 </div>

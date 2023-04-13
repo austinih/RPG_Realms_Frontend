@@ -10,33 +10,46 @@ import RPGDetails from './components/RPGDetails';
 import CreateReview from './components/CreateReview';
 import Login from './components/Login/LogIn';
 import AllRPGs from './components/pages/AllRPGs';
+import FeaturedGame from './components/home/FeaturedGame';
+import { DataContext } from './DataContext';
+import { useState } from 'react';
 
 function App() {
+
+  const [chosenRPG, setChosenRPG] = useState({
+    chosenRpgId: '',
+    chosenPublisherId: '',
+  })
+
+
   return (
     <div className='bg-lightsurface'>
-      <header >
-        <Header />
+      <DataContext.Provider value={{ chosenRPG, setChosenRPG }}>
+        <header >
+          <Header/>
 
-      </header>
-      <main className='mx-20 my-5 min-h-[70vh] shadow-2xl bg-white'>
-      <br></br>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/profile" element={<Profile/>}/>
-          <Route path="/rpgs/:rpgId" element={<RPGDetails/>}/>
-          <Route path="/createreview" element={<CreateReview/>}/>
-          <Route path="/allrpgs" element={<AllRPGs/>}/>
-          
+        </header>
+        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl bg-primarycontainer'>
+        <br></br>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/rpgs/:rpgId" element={<RPGDetails/>}/>
+            <Route path="/createreview" element={<CreateReview/>}/>
+            <Route path="/allrpgs" element={<AllRPGs/>}/>
+            
 
 
-        </Routes>
-      </main>
-      <footer >
-        <Footer />
-      </footer>
+          </Routes>
+        </main>
+        <footer >
+          <Footer />
+        </footer>
+      </DataContext.Provider>
     </div>
+   
   );
 }
 

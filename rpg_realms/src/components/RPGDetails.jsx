@@ -2,24 +2,38 @@ import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 
+
 export default function RPGDetails() {
     
     const [rpg, setRPG] = useState({});
+    const [publisher, setPublisher] = useState({});
     const { rpgId } = useParams();
+
 
     useEffect(() => {
         const renderRPG = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/rpgs/1/`);
+                const response = await axios.get(`http://localhost:8000/rpgs/${rpgId}/`);
                 setRPG(response.data);
             } catch (error) {}
         };
         renderRPG();
     }, []);
-    if (!rpg) {
-        return <h1>Loading, please wait</h1>;}
+
+    const publisherUrl = rpg.publisher
+    console.log(publisherUrl)
+    useEffect(() => {
+        const renderPublisher = async () => {
+            try {
+                const response = await axios.get(`${publisherUrl}`);
+                setPublisher(response.data);
+            } catch (error) {}
+        };
+        renderPublisher();
+    }, []);
+
     
-    return(
+    return rpg && publisher ? (
        
        <div >
             <div className="mx-8 p4 flex">
@@ -33,12 +47,14 @@ export default function RPGDetails() {
                     </div>
                 </div>
             </div>
-            <div>
-                
-            </div>
+                <p>Publisher</p>
+                <div>
+                    <p>{publisher.name}</p>
+                </div>
             
         </div>
         
-    )
+    ) : <h1> Loading, Please Wait</h1>
 
+    
 }

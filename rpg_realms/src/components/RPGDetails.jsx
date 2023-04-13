@@ -66,9 +66,9 @@ export default function RPGDetails() {
                 <div className=" mx-8  flex self-center flex-col  px-8  bg-white">
                     {rpg.reviews ? rpg.reviews.map((review) => (
                         <div>
-                            <details >
+                            <details className=" py-2 my-2 mx-3 hover:border-2 hover:border-primary" >
                                 <summary className="
-                                        flex flex-row justify-around py-2 my-2 mx-3 place-items-center  cursor-pointer hover:bg-blue-400 hover:rounded-md border-collapse ">
+                                        flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse ">
                                     <p className="w-10 text-center">{review.score} </p>
                                     <p className="text-2xl">|</p>
                                     <p className="w-[22rem] pl-5 ">{review.title}  </p>
@@ -83,11 +83,13 @@ export default function RPGDetails() {
                                     </Link> */}
                                 </summary>
                                     {/* https://www.kindacode.com/article/tailwind-css-how-to-create-accordions-collapsible-content/ */}
-                                <div className="mx-3  cursor-pointer">
-                                    <p>{review.content}</p>
+                                <div className="mx-5 mt-3 p-5 cursor-pointer border-2 border-primary">
+                                    <p></p>
+                                    <p><span className="italic text-primary font-bold ">Review: </span>{review.content}</p>
                                 </div>
                                 
                             </details>
+                            
                             <p className="border-solid border-b-2 border-b-black"></p>
                         </div>
                         

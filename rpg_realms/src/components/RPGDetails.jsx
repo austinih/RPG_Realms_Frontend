@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 
 
+
 export default function RPGDetails() {
     
     const [rpg, setRPG] = useState({});
@@ -64,29 +65,36 @@ export default function RPGDetails() {
                 <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center">Reviews</div>
                 <div className=" mx-8  flex self-center flex-col  px-8  bg-white">
                     {rpg.reviews ? rpg.reviews.map((review) => (
-                        <div className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black ">
-                            <p className="w-10 text-center">{review.score} </p>
-                            <p className="text-2xl">|</p>
-                            <p className="w-[22rem] pl-5 ">{review.title}  </p>
-                            {/* <p>{review.content} |</p> */}
-                            <p className="text-2xl ">|</p>
-                            <p className="w-32 text-center">User </p>
-                            <p className="text-2xl">|</p>
-                            <p className="w-40 text-center">Date Posted </p>
+                        <details >
+                            <summary className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black cursor-pointer bg-inherit">
+                                <p className="w-10 text-center">{review.score} </p>
+                                <p className="text-2xl">|</p>
+                                <p className="w-[22rem] pl-5 ">{review.title}  </p>
+                                {/* <p>{review.content} |</p> */}
+                                <p className="text-2xl ">|</p>
+                                <p className="w-32 text-center">User </p>
+                                <p className="text-2xl">|</p>
+                                <p className="w-40 text-center">Date Posted </p>                         
+                                
+                                {/* <Link>
+                                    <button className="buttons w-28 align-middle open:bg-amber-50" >Read</button>
+                                </Link> */}
+                            </summary>
+
+                                {/* https://www.kindacode.com/article/tailwind-css-how-to-create-accordions-collapsible-content/ */}
+                            <div className="">
+                                <p>{review.content}</p>
+                            </div>
                             
-                            
-                            
-                            <Link>
-                                <button className="buttons w-28 align-middle">Read</button>
-                            </Link>
-                        </div>
+                        </details>
+                        
                     )): <h2>No reviews found</h2>
                     }
                     <button className="mt-2 rounded-t-2xl w-56 mx-auto bg-secondary text-primary  hover:text-white hover:h-10 hover:w-96 transition-all duration-300 ease-linear hover:font-bold hover:text-lg hover:rounded-t-md ">+ Review</button>
 
                 </div>
-
             </div>
+
 
             
         </div>

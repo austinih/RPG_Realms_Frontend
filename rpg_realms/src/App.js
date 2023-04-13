@@ -13,6 +13,10 @@ import AllRPGs from './components/pages/AllRPGs';
 import FeaturedGame from './components/home/FeaturedGame';
 import { DataContext } from './DataContext';
 import { useState } from 'react';
+import React from 'react';
+import useCollapse from 'react-collapsed';
+import './App.css';
+
 
 function App() {
 

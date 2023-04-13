@@ -36,9 +36,9 @@ export default function RPGDetails() {
     return rpg && publisher ? (
        
        <div >
-            <div className="mx-8 p4 flex">
-                <img src={rpg.image_url} className="max-w-xs max-h-[50vh]"></img>
-                <div className="ml-5">
+            <div className="p4 flex justify-center">
+                <img src={rpg.image_url} className="max-w-xs max-h-[65vh]"></img>
+                <div className="ml-5 w-[50vw]">
                     <p>{rpg.title}</p>
                     <p>Publisher*</p>
                     <div className="bg-lightsurface px-5 py-3">
@@ -51,16 +51,16 @@ export default function RPGDetails() {
             <div>
                 <p>{publisher.name}</p>
             </div>
-            <div className="my-5 pb-10">
+            <div className="my-5 pb-10 w-[75vw] mx-auto">
                 <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center">Reviews</div>
                 <div className=" mx-8  flex self-center flex-col  px-8  bg-white">
                     {rpg.reviews ? rpg.reviews.map((review) => (
                         <div className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black ">
                             <p className="w-[20rem]  ">{review.title}  </p>
                             {/* <p>{review.content} |</p> */}
-                            <p>|</p>
+                            <p className="text-2xl">|</p>
                             <p className="w-32 ">User </p>
-                            <p>|</p>
+                            <p className="text-2xl">|</p>
                             <p className="w-40 ">Date Posted </p>
                             
                             <Link>

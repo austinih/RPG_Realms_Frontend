@@ -49,9 +49,9 @@ export default function Profile() {
                                     <p className="w-[18rem] text-sm ">Review title: {review.title}  </p>
                                 </div>
                                 {/* <p>{review.content} |</p> */}
-                                <p>|</p>
+                                <p className="text-2xl">|</p>
                                 <p className="w-28 ">Date Posted </p>
-                                <p>|</p>
+                               
                                 <Link>
                                     <button className="buttons w-20 align-middle">Read</button>
                                 </Link>

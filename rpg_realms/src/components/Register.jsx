@@ -37,9 +37,9 @@ export default function Register() {
 
     return(
        
-        <div className="w-72 m-auto bg-white " >
+        <div className="w-80 m-auto  bg-white shadow-md shadow-slate-300 p-5" >
             <h1 className="text-3xl text-center mb-3 pt-3">Register</h1>
-            <form className="w-72 h-[28rem] p-4 shadow-md shadow-slate-300">
+            <form className="w-72 h-[28rem] p-4 ">
                 <div>
                     <label htmlFor="name" className="flex">Name:</label>
                     <input className="input-field"

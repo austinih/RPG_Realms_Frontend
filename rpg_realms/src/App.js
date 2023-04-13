@@ -29,7 +29,7 @@ function App() {
           <Header/>
 
         </header>
-        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl bg-lightsurface'>
+        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl pb-5 bg-lightsurface'>
         <br></br>
           <Routes>
             <Route path="/" element={<Home/>} />

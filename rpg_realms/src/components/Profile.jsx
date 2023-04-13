@@ -1,4 +1,23 @@
+import { useEffect, useState, useContext } from "react";
+import axios from "axios";
+
 export default function Profile() {
+    
+    const [user, setUser] = useState({});
+    const { rpgId } = useParams();
+
+
+    useEffect(() => {
+        const renderRPG = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8000/rpgs/${rpgId}/`);
+                setRPG(response.data);
+            } catch (error) {}
+        };
+        renderRPG();
+    }, []);
+    
+    
     return(
        
        <div >

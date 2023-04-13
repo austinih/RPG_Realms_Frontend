@@ -32,6 +32,14 @@ export default function RPGDetails() {
         renderPublisher();
     }, []);
 
+    // const CalculateScore = () => {
+    //     const scores = rpg.reviews.map((review)=>review.score)
+    //     navigate(`${index}`)
+    //     console.log(`${index}`)
+    // }
+    // const scores = rpg.reviews.map((review)=>review.score);
+    // const average = scores.reduce((totalScore, score) => totalScore + score, 0);
+    // const averageTotal = parseFloat((average / review.length).toFixed(2));
     
     return rpg && publisher ? (
        
@@ -41,6 +49,7 @@ export default function RPGDetails() {
                 <div className="ml-5 w-[50vw]">
                     <p>{rpg.title}</p>
                     <p>Publisher*</p>
+                    {/* <p>{scores}</p> */}
                     <div className="bg-lightsurface px-5 py-3">
                         <h1 className="pb-2 border-b-solid border-b-2 border-black">Full Description:</h1>
                         <p className="pt-2">{rpg.description}</p>
@@ -56,12 +65,16 @@ export default function RPGDetails() {
                 <div className=" mx-8  flex self-center flex-col  px-8  bg-white">
                     {rpg.reviews ? rpg.reviews.map((review) => (
                         <div className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black ">
-                            <p className="w-[20rem]  ">{review.title}  </p>
+                            <p className="w-10 text-center">{review.score} </p>
+                            <p className="text-2xl">|</p>
+                            <p className="w-[22rem] pl-5 ">{review.title}  </p>
                             {/* <p>{review.content} |</p> */}
+                            <p className="text-2xl ">|</p>
+                            <p className="w-32 text-center">User </p>
                             <p className="text-2xl">|</p>
-                            <p className="w-32 ">User </p>
-                            <p className="text-2xl">|</p>
-                            <p className="w-40 ">Date Posted </p>
+                            <p className="w-40 text-center">Date Posted </p>
+                            
+                            
                             
                             <Link>
                                 <button className="buttons w-28 align-middle">Read</button>

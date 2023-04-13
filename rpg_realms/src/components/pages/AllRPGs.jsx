@@ -23,7 +23,7 @@ export default function AllRPGs() {
     
     return (
        
-        <div className="shadow-2xl">
+        <div >
             <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 rounded-r-3xl">Explore All RPGs</h1>
             <div className="flex flex-wrap justify-center ">
                 {rpgs.map((rpg)=> (

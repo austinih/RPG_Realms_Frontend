@@ -65,28 +65,32 @@ export default function RPGDetails() {
                 <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center">Reviews</div>
                 <div className=" mx-8  flex self-center flex-col  px-8  bg-white">
                     {rpg.reviews ? rpg.reviews.map((review) => (
-                        <details >
-                            <summary className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black cursor-pointer bg-inherit">
-                                <p className="w-10 text-center">{review.score} </p>
-                                <p className="text-2xl">|</p>
-                                <p className="w-[22rem] pl-5 ">{review.title}  </p>
-                                {/* <p>{review.content} |</p> */}
-                                <p className="text-2xl ">|</p>
-                                <p className="w-32 text-center">User </p>
-                                <p className="text-2xl">|</p>
-                                <p className="w-40 text-center">Date Posted </p>                         
+                        <div>
+                            <details >
+                                <summary className="
+                                        flex flex-row justify-around py-2 my-2 mx-3 place-items-center  cursor-pointer hover:bg-blue-400 hover:rounded-md border-collapse ">
+                                    <p className="w-10 text-center">{review.score} </p>
+                                    <p className="text-2xl">|</p>
+                                    <p className="w-[22rem] pl-5 ">{review.title}  </p>
+                                    {/* <p>{review.content} |</p> */}
+                                    <p className="text-2xl ">|</p>
+                                    <p className="w-32 text-center">User </p>
+                                    <p className="text-2xl">|</p>
+                                    <p className="w-40 text-center">Date Posted </p>                         
+                                    
+                                    {/* <Link>
+                                        <button className="buttons w-28 align-middle open:bg-amber-50" >Read</button>
+                                    </Link> */}
+                                </summary>
+                                    {/* https://www.kindacode.com/article/tailwind-css-how-to-create-accordions-collapsible-content/ */}
+                                <div className="mx-3  cursor-pointer">
+                                    <p>{review.content}</p>
+                                </div>
                                 
-                                {/* <Link>
-                                    <button className="buttons w-28 align-middle open:bg-amber-50" >Read</button>
-                                </Link> */}
-                            </summary>
-
-                                {/* https://www.kindacode.com/article/tailwind-css-how-to-create-accordions-collapsible-content/ */}
-                            <div className="">
-                                <p>{review.content}</p>
-                            </div>
-                            
-                        </details>
+                            </details>
+                            <p className="border-solid border-b-2 border-b-black"></p>
+                        </div>
+                        
                         
                     )): <h2>No reviews found</h2>
                     }

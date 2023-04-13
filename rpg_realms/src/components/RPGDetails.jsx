@@ -47,10 +47,34 @@ export default function RPGDetails() {
                     </div>
                 </div>
             </div>
-                <p>Publisher</p>
-                <div>
-                    <p>{publisher.name}</p>
+            <p>Publisher</p>
+            <div>
+                <p>{publisher.name}</p>
+            </div>
+            <div className="my-5 pb-10">
+                <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center">Reviews</div>
+                <div className=" mx-8  flex self-center flex-col  px-8  bg-white">
+                    {rpg.reviews ? rpg.reviews.map((review) => (
+                        <div className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black ">
+                            <p className="w-[20rem]  ">{review.title}  </p>
+                            {/* <p>{review.content} |</p> */}
+                            <p>|</p>
+                            <p className="w-32 ">User </p>
+                            <p>|</p>
+                            <p className="w-40 ">Date Posted </p>
+                            
+                            <Link>
+                                <button className="buttons w-28 align-middle">Read</button>
+                            </Link>
+                        </div>
+                    )): <h2>No reviews found</h2>
+                    }
+                    <button className="mt-2 rounded-t-2xl w-56 mx-auto bg-secondary text-primary  hover:text-white hover:h-10 hover:w-96 transition-all duration-300 ease-linear hover:font-bold hover:text-lg">+ Review</button>
+
                 </div>
+
+            </div>
+
             
         </div>
         

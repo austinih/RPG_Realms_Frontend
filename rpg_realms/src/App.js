@@ -7,7 +7,7 @@ import {Routes, Route} from 'react-router-dom'
 import Register from './components/Register';
 import Profile from './components/Profile';
 import RPGDetails from './components/RPGDetails';
-import CreateReview from './components/CreateReview';
+import CreateReview from './components/reviews/CreateReview';
 import Login from './components/Login/LogIn';
 import AllRPGs from './components/pages/AllRPGs';
 import FeaturedGame from './components/home/FeaturedGame';
@@ -23,13 +23,13 @@ function App() {
 
 
   return (
-    <div className='bg-lightsurface'>
+    <div className='bg-primarycontainer'>
       <DataContext.Provider value={{ chosenRPG, setChosenRPG }}>
         <header >
           <Header/>
 
         </header>
-        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl bg-primarycontainer'>
+        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl bg-lightsurface'>
         <br></br>
           <Routes>
             <Route path="/" element={<Home/>} />

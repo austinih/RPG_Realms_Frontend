@@ -17,8 +17,8 @@ export default function Login() {
     
     return(
        
-       <div className="w-72 m-auto " >
-            <h1 className="text-3xl text-center mb-3">Log In</h1>
+       <div className="w-72 m-auto bg-white " >
+            <h1 className="text-3xl text-center mb-3 pt-3">Log In</h1>
             <form className="w-72 h-56 p-4 shadow-md shadow-slate-300">
                 <div>
                     <label htmlFor="email" className="flex">Email:</label>

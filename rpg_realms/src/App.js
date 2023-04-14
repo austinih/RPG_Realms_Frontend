@@ -8,13 +8,13 @@ import Register from './components/Register';
 import Profile from './components/Profile';
 import RPGDetails from './components/RPGDetails';
 import CreateReview from './components/reviews/CreateReview';
+import DeleteReview from './components/reviews/DeleteReview';
 import Login from './components/Login/LogIn';
 import AllRPGs from './components/pages/AllRPGs';
 import FeaturedGame from './components/home/FeaturedGame';
 import { DataContext } from './DataContext';
 import { useState } from 'react';
 import React from 'react';
-import useCollapse from 'react-collapsed';
 import './App.css';
 
 
@@ -43,6 +43,7 @@ function App() {
             <Route path="/rpgs/:rpgId" element={<RPGDetails/>}/>
             <Route path="/allrpgs" element={<AllRPGs/>}/>
             <Route path="/createreview/:rpgId" element={<CreateReview/>}/>
+            <Route path="/deletereview/:reviewId" element={<DeleteReview/>}/>
             
 
 

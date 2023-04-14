@@ -18,10 +18,10 @@ export default function Profile() {
         renderUser();
     }, []);
     
-    const deleteSelectedReview = async (id) => {
-        // e.preventDefault()
-        await DeleteReview(id)
-    }
+    // const deleteSelectedReview = async (id) => {
+    //     // e.preventDefault()
+    //     await DeleteReview(id)
+    // }
     
     return(
        
@@ -65,7 +65,9 @@ export default function Profile() {
 {/* Update Review  */}
                                 <button className="buttons w-20 align-middle">Edit</button>
 {/* Delete Review */}
-                                <button className="buttons w-20 align-middle" onClick={deleteSelectedReview}>Delete</button>
+                                <Link to={`/deletereview/${review.id}`} key={review.id}>
+                                    <button className="buttons w-20 align-middle" >Delete</button>
+                                </Link>
                                 
 
                             </div>

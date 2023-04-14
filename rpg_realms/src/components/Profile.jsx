@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { DeleteReview } from "./reviews/DeleteReview";
 
 export default function Profile() {
     
@@ -17,10 +18,15 @@ export default function Profile() {
         renderUser();
     }, []);
     
+    const deleteSelectedReview = async (id) => {
+        // e.preventDefault()
+        await DeleteReview(id)
+    }
     
     return(
        
         <div className="flex flex-wrap p-5 justify-center">
+{/* Account Information */}
             <div className="mx-5 mb-10">
                 <div className="bg-primary w-44 text-white text-center rounded-t-2xl">Account Information</div>
                 <div>
@@ -38,25 +44,28 @@ export default function Profile() {
                     </div>
                 </div>
             </div>
+{/* Reviews */}
             <div className="mx-5">   
                 <div className="bg-primary w-44 text-white text-center rounded-t-2xl ">My Reviews</div>  
                     <div className="   flex self-center flex-col   w-[65vw] p-5 bg-white">
                         {user.reviews ? user.reviews.map((review) => (
                             <div className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black ">
-                                <img src="https://i.pinimg.com/originals/04/ad/f5/04adf5601d7cca9c5798dd2e6a14b65a.jpg" className="w-10"/>
-                                <div className="w-[18rem]">
-                                    <p className="w-[15rem] text-md ">Game title:  </p>
-                                    <p className="w-[18rem] text-sm ">Review title: {review.title}  </p>
+                                <img src={review.rpg_image} className="w-10"/>
+                                <div className="w-[15rem]">
+                                    <p className="w-[15rem] text-md ">Game: {review.rpg_title} </p>
+                                    <p className="w-[18rem] text-sm "> {review.title}  </p>
+                                    
                                 </div>
                                 {/* <p>{review.content} |</p> */}
                                 <p className="text-2xl">|</p>
-                                <p className="w-28 ">Date Posted </p>
+                                <p className="w-20">Score: {review.score}</p>
+                                <p className="text-2xl">|</p>
+                                <p className="w-28 ">{review.date_posted} </p>
                                
-                                <Link>
-                                    <button className="buttons w-20 align-middle">Read</button>
-                                </Link>
+{/* Update Review  */}
                                 <button className="buttons w-20 align-middle">Edit</button>
-                                <button className="buttons w-20 align-middle">Delete</button>
+{/* Delete Review */}
+                                <button className="buttons w-20 align-middle" onClick={deleteSelectedReview}>Delete</button>
                                 
 
                             </div>

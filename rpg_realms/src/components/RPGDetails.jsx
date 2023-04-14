@@ -5,7 +5,6 @@ import { useParams, Link } from "react-router-dom";
 export default function RPGDetails() {
     
     const [rpg, setRPG] = useState({});
-    const [publisher, setPublisher] = useState({});
     const { rpgId } = useParams();
 
 
@@ -19,17 +18,7 @@ export default function RPGDetails() {
         renderRPG();
     }, []);
 
-    const publisherUrl = rpg.publisher
-    console.log(publisherUrl)
-    useEffect(() => {
-        const renderPublisher = async () => {
-            try {
-                const response = await axios.get(`${publisherUrl}`);
-                setPublisher(response.data);
-            } catch (error) {}
-        };
-        renderPublisher();
-    }, []);
+    
 
     // const CalculateScore = () => {
     //     const scores = rpg.reviews.map((review)=>review.score)
@@ -40,33 +29,41 @@ export default function RPGDetails() {
     // const average = scores.reduce((totalScore, score) => totalScore + score, 0);
     // const averageTotal = parseFloat((average / review.length).toFixed(2));
     
-    return rpg && publisher ? (
+    return rpg ? (
        
        <div className="m-5">
 {/* RPG Description */}
             <div className=" ">
-            <div className="p4 flex justify-center w-[80vw] mx-auto flex-wrap  ">
-                <img src={rpg.image_url} className=" max-w-xs max-h-[50vh] mb-5 rounded-xl"></img>
-                <div className="ml-5 max-w-xl">
-                    <p>{rpg.title}</p>
-                    <p>Publisher*</p>
-                    {/* <p>{scores}</p> */}
-                    <div className="bg-lightsurface px-5 py-3  ">
-                        <h1 className="pb-2 border-b-solid border-b-2 border-black">Full Description:</h1>
-                        <p className="pt-2 max-h-96 overflow-auto">{rpg.description}</p>
+                <p className="text-center text-3xl">{rpg.title}</p>
+                <p className="text-center text-lg mb-5">From {rpg.publisher_name}</p>
+                <div className="p4 flex justify-center w-[80vw] mx-auto flex-wrap  ">
+                    <img src={rpg.image_url} className=" max-w-xs max-h-[50vh] mb-5 rounded-xl shadow-md shadow-slate-700"></img>
+                    <div className="ml-5 max-w-xl">
+                        
+                        {/* <p>{scores}</p> */}
+                        <div className="px-5 py-3  ">
+                            <h1 className="ml-5 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center">Full Description:</h1>
+                            <p className="pt-2 max-h-96 overflow-auto bg-white px-5 py-3 rounded-lg shadow-md shadow-slate-700">{rpg.description}</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
 {/* Publisher Information */}
-            <p>Publisher</p>
-            <div>
-                <p>{publisher.name}</p>
+            <div className="my-5 pb-10 w-[75vw] mx-auto ">
+                <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center  ">Publisher</div>
+                <div className=" mx-8   self-center px-5 py-3 text-black bg-white flex flex-row   place-items-center rounded-lg shadow-md shadow-slate-700">
+                    <img src={rpg.publisher_logo} className="w-20 ml-5"/>
+                    <p className="ml-16">{rpg.publisher_name}</p>
+                    <p className="ml-16 text-2xl border-r-2 border-black h-8"></p>
+                    <a href={rpg.publisher_website} target="_blank" className="ml-16 hover:scale-110 hover:font-bold">Publisher website</a>
+                </div>
+                
+
             </div>
 {/* Reviews */}
             <div className="my-5 pb-10 w-[75vw] mx-auto ">
                 <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center ">Reviews</div>
-                <div className=" mx-8  flex self-center flex-col  px-8  bg-white ">
+                <div className=" mx-8  flex self-center flex-col  px-8  bg-white rounded-lg shadow-md shadow-slate-700">
                     <div className=" p-2y my-2 mx-3 text-primary font-bold flex flex-row justify-around  place-items-center text-center underline">
                         <p className="-ml-2 w-16 text-center">Score </p>
                         <p className="w-[22rem] pl-5 "> Title  </p>
@@ -75,17 +72,17 @@ export default function RPGDetails() {
                     </div>
 {/* Map reviews */}
                     {rpg.reviews ? rpg.reviews.map((review) => (
-                        <div>
+                        <div className="shadow-sm shadow-slate-700 mb-2">
                             <details className=" py-2 my-2 mx-3" >
                                 <summary className="
                                         flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse ">
                                     <p className="w-16 text-center">{review.score} </p>
-                                    <p className="text-2xl">|</p>
+                                    <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
                                     <p className="w-[22rem] pl-5 ">{review.title}  </p>
                                     {/* <p>{review.content} |</p> */}
-                                    <p className="text-2xl ">|</p>
+                                    <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
                                     <p className="w-32 text-center">User </p>
-                                    <p className="text-2xl">|</p>
+                                    <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
                                     <p className="w-40 text-center">{review.date_posted} </p>                         
                                 </summary>
                                     {/* https://www.kindacode.com/article/tailwind-css-how-to-create-accordions-collapsible-content/ */}

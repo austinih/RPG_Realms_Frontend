@@ -48,9 +48,9 @@ export default function CreateReview() {
 
     return(
        
-       <div lassName="w-80 h-auto m-auto  bg-white shadow-md shadow-slate-300 p-5">
+       <div className="w-[65vw] h-[70vh] m-auto  bg-white shadow-md shadow-slate-300  overflow-auto">
             <h1 className="text-3xl text-center mb-3 pt-3">New Review</h1>
-            <form className="w-72 h-[28rem] p-4 " onSubmit={handleSubmit}>
+            <form className=" w-72  px-8 pt-4 " onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="title">Title:</label>
                     <input className="input-field"
@@ -84,9 +84,15 @@ export default function CreateReview() {
                         required
                     />                   
                 </div>
-                <button onClick={handleShow}>
-                    Submit
-                </button>
+                <div className="">
+                    <button onClick={handleShow} className="
+                        rounded-3xl bg-tertiary text-white 
+                        font-bold my-4 ml-4 px-4 py-1
+                        hover:bg-tertiarycontainer   hover:text-surface 
+                        hover:w-96 hover:rounded-md transition-all duration-500 ease-linear">
+                        Submit Review
+                    </button>
+                </div>
                 {/* <Modal
                     show={show}
                     onHide={handleClose}

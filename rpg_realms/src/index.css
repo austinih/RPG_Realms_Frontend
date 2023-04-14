@@ -31,7 +31,7 @@
                 hover:rounded-md transition-all duration-300 ease-linear
     }
     .input-field {
-        @apply  w-60 ml-4 my-2 px-4 py-1 rounded-2xl
+        @apply  w-96 ml-4 my-2 px-4 py-1 rounded-2xl
                 bg-primarycontainer text-surface 
     }
     .collapse_content {

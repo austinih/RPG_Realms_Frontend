@@ -37,7 +37,7 @@ export default function Register() {
 
     return(
        
-        <div className="w-80 m-auto  bg-white shadow-md shadow-slate-300 p-5" >
+        <div className="w-[30rem] m-auto  bg-white shadow-md shadow-slate-300 p-5" >
             <h1 className="text-3xl text-center mb-3 pt-3">Register</h1>
             <form className="w-72 h-[28rem] p-4 ">
                 <div>

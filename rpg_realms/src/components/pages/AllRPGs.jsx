@@ -61,13 +61,13 @@ export default function AllRPGs() {
        
         <div >
             
-            <div className="flex items-center">
+            <div className="flex">
                 <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 rounded-r-3xl">Explore 
                     All RPGs
                 </h1>
                 {/* Search Bar */}
-                <div className="m-auto">
-                    <input className="mx-4 w-96  px-3 py-1 rounded-l-2xl border-surface border-2"
+                <div className="m-auto flex">
+                    <input className="mx-4 w-96 h-9 px-3 py-1 rounded-l-2xl border-surface border-2"
                         type="text"
                         id="searchBar"
                         placeholder="Title Search....."
@@ -75,7 +75,7 @@ export default function AllRPGs() {
                         onChange={handleChange}
                         onKeyUp={handleKeyDown}
                     />
-                    <button className="px-3 py-2.5 -ml-4 rounded-r-2xl 
+                    <button className="px-3 py-1 -ml-4 h-9 rounded-r-2xl 
                         text-white bg-primary hover:bg-secondary hover:text-primary border-surface border-r-2 border-t-2 border-b-2"  
                         onClick={handleSubmit}>
                         {<FaSearch size="12"></FaSearch>}

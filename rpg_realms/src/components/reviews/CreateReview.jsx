@@ -4,21 +4,26 @@ import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 
 export default function CreateReview() {
 
+    let navigate = useNavigate()
+    const today = new Date(),
+    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     const { rpgId } = useParams();
     const [createForm, setCreateForm] = useState([]);
     const [formValues, setFormValues] = useState({
-        // rpg_id:`${rpgId}`,
-        rpg_id:"1",
+        rpg_id:`${rpgId}`,
+        // rpg_id:"1",
         user_id: "2",
+        date_posted: date,
         title: "",
         content: "",
         score: "",
     });
+    
 
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -31,6 +36,8 @@ export default function CreateReview() {
             formValues
         )
         setCreateForm(response.data);
+        navigate(`/rpgs/${rpgId}`)
+
     };
 
     

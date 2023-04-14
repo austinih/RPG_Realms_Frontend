@@ -2,8 +2,6 @@ import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 
-
-
 export default function RPGDetails() {
     
     const [rpg, setRPG] = useState({});
@@ -44,19 +42,21 @@ export default function RPGDetails() {
     
     return rpg && publisher ? (
        
-       <div >
+       <div className="m-5">
 {/* RPG Description */}
-            <div className="p4 flex justify-center">
-                <img src={rpg.image_url} className="max-w-xs max-h-[65vh]"></img>
-                <div className="ml-5 w-[50vw]">
+            <div className=" ">
+            <div className="p4 flex justify-center w-[80vw] mx-auto flex-wrap  ">
+                <img src={rpg.image_url} className=" max-w-xs max-h-[50vh] mb-5 rounded-xl"></img>
+                <div className="ml-5 max-w-xl">
                     <p>{rpg.title}</p>
                     <p>Publisher*</p>
                     {/* <p>{scores}</p> */}
-                    <div className="bg-lightsurface px-5 py-3">
+                    <div className="bg-lightsurface px-5 py-3  ">
                         <h1 className="pb-2 border-b-solid border-b-2 border-black">Full Description:</h1>
-                        <p className="pt-2">{rpg.description}</p>
+                        <p className="pt-2 max-h-96 overflow-auto">{rpg.description}</p>
                     </div>
                 </div>
+            </div>
             </div>
 {/* Publisher Information */}
             <p>Publisher</p>
@@ -73,9 +73,10 @@ export default function RPGDetails() {
                         <p className="w-32 text-center">User </p>
                         <p className="w-40 text-center">Date Posted</p> 
                     </div>
+{/* Map reviews */}
                     {rpg.reviews ? rpg.reviews.map((review) => (
                         <div>
-                            <details className=" py-2 my-2 mx-3 hover:border-2 hover:border-primary" >
+                            <details className=" py-2 my-2 mx-3" >
                                 <summary className="
                                         flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse ">
                                     <p className="w-16 text-center">{review.score} </p>
@@ -102,8 +103,9 @@ export default function RPGDetails() {
                     )): <h2>No reviews found</h2>
                     }
 {/* Create Review Button */}
-                    <button className="mt-2 rounded-t-2xl w-56 mx-auto bg-secondary text-primary  hover:text-white hover:h-10 hover:w-96 transition-all duration-300 ease-linear hover:font-bold hover:text-lg hover:rounded-t-md ">+ Review</button>
-
+                    <Link to={`/createreview/${rpg.id}`} key={rpg.id} className=" mt-2 mx-auto">
+                        <button className=" rounded-t-2xl w-56  bg-secondary text-primary  hover:text-white hover:h-10 hover:w-96 transition-all duration-300 ease-linear hover:font-bold hover:text-lg hover:rounded-t-md ">+ Review</button>
+                    </Link>
                 </div>
             </div>
 

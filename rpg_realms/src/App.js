@@ -41,8 +41,8 @@ function App() {
             <Route path="/register" element={<Register/>}/>
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/rpgs/:rpgId" element={<RPGDetails/>}/>
-            <Route path="/createreview" element={<CreateReview/>}/>
             <Route path="/allrpgs" element={<AllRPGs/>}/>
+            <Route path="/createreview/:rpgId" element={<CreateReview/>}/>
             
 
 

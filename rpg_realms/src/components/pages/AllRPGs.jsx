@@ -61,7 +61,7 @@ export default function AllRPGs() {
        
         <div >
             
-            <div className="flex">
+            <div className="flex ">
                 <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 rounded-r-3xl">Explore 
                     All RPGs
                 </h1>

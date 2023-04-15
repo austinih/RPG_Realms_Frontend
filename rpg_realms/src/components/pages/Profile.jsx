@@ -27,9 +27,8 @@ export default function Profile() {
         <div className="flex flex-wrap p-5 justify-center">
 {/* Account Information */}
             <div className="mx-5 mb-10">
-                <div className="bg-primary w-44 text-white text-center rounded-t-2xl">Account Information</div>
-                <div>
-                    <div className="w-96 h-72 p-5 bg-white">
+                <div className="bg-primary w-44 ml-5 text-white text-center rounded-t-2xl">Account Information</div>
+                    <div className="w-96 h-72 p-5 bg-white rounded-lg shadow-md shadow-slate-700">
                         <ul>
                             <li>Name 
                                 <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-primarycontainer text-surface">{user.name}</div>  
@@ -41,15 +40,14 @@ export default function Profile() {
                         </ul>
                         <button className="buttons">Edit</button>
                     </div>
-                </div>
             </div>
 {/* Reviews */}
             <div className="mx-5">   
-                <div className="bg-primary w-44 text-white text-center rounded-t-2xl ">My Reviews</div>  
-                    <div className="   flex self-center flex-col   w-[70vw] p-5 bg-white">
+                <div className="ml-5 bg-primary w-44 text-white text-center rounded-t-2xl ">My Reviews</div>  
+                    <div className="   flex self-center flex-col   w-[70vw] p-5 bg-white rounded-lg shadow-md shadow-slate-700">
                         {user.reviews ? user.reviews.map((review) => (
-                            <div>
-                            <details className=" py-2 my-2 mx-3">
+                            <div className="shadow-sm shadow-slate-700 mb-2">
+                            <details className=" py-2 my-2 mx-3 open:border-primary open:border-2">
                                 <summary className="
                                     flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse">
                                     <img src={review.rpg_image} className="w-10"/>
@@ -71,8 +69,9 @@ export default function Profile() {
                                         <button className="buttons w-20 align-middle" >Delete</button>
                                     </Link>
                                 </summary>
-                                    <div className="mx-5 mt-3 p-5  border-2 border-primary">
-                                        <p></p>
+                                    <div className="mx-5 mt-3 p-5  ">
+                                        <p className="border-solid border-b-2 border-b-black"></p>
+                                        <br></br>
                                         <p><span className="italic text-primary font-bold ">Review: </span>{review.content}</p>
                                     </div>
 

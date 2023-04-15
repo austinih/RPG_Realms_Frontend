@@ -35,7 +35,7 @@ function App() {
           <Header/>
 
         </header>
-        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl pb-5 bg-primarycontainer shadow-md shadow-slate-700'>
+        <main className='mx-20 my-5 min-h-[70vh] pb-5 bg-primarycontainer shadow-md shadow-slate-700'>
         <br></br>
           <Routes>
             <Route path="/" element={<Home/>} />

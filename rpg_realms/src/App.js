@@ -5,8 +5,8 @@ import Footer from './components/Footer';
 import Home from './components/home/Home';
 import {Routes, Route} from 'react-router-dom'
 import Register from './components/Register';
-import Profile from './components/Profile';
-import RPGDetails from './components/RPGDetails';
+import Profile from './components/pages/Profile';
+import RPGDetails from './components/pages/RPGDetails';
 import CreateReview from './components/reviews/CreateReview';
 import DeleteReview from './components/reviews/DeleteReview';
 import UpdateReview from './components/reviews/UpdateReview';
@@ -29,13 +29,13 @@ function App() {
 
 
   return (
-    <div className='bg-primarycontainer'>
+    <div className='bg-white'>
       <DataContext.Provider value={{ chosenRPG, setChosenRPG }}>
         <header >
           <Header/>
 
         </header>
-        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl pb-5 bg-lightsurface'>
+        <main className='mx-20 my-5 min-h-[70vh] shadow-2xl pb-5 bg-primarycontainer shadow-md shadow-slate-700'>
         <br></br>
           <Routes>
             <Route path="/" element={<Home/>} />

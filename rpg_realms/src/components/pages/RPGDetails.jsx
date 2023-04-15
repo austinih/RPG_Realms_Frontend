@@ -43,7 +43,10 @@ export default function RPGDetails() {
                         {/* <p>{scores}</p> */}
                         <div className="px-5 py-3  ">
                             <h1 className="ml-5 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center">Full Description:</h1>
-                            <p className="pt-2 max-h-96 overflow-auto bg-white px-5 py-3 rounded-lg shadow-md shadow-slate-700">{rpg.description}</p>
+                            <div className="pt-2 max-h-96 overflow-auto bg-white px-5 py-3 rounded-lg shadow-md shadow-slate-700">
+                                <p >{rpg.description}</p>
+                                <p className="float-right">---- Publisher Description</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,7 +96,7 @@ export default function RPGDetails() {
                                 
                             </details>
                             
-                            <p className="border-solid border-b-2 border-b-black"></p>
+                           
                         </div>
                         
                         

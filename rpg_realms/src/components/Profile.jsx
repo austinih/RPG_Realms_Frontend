@@ -46,7 +46,7 @@ export default function Profile() {
 {/* Reviews */}
             <div className="mx-5">   
                 <div className="bg-primary w-44 text-white text-center rounded-t-2xl ">My Reviews</div>  
-                    <div className="   flex self-center flex-col   w-[65vw] p-5 bg-white">
+                    <div className="   flex self-center flex-col   w-[70vw] p-5 bg-white">
                         {user.reviews ? user.reviews.map((review) => (
                             <div>
                             <details className=" py-2 my-2 mx-3">
@@ -56,14 +56,12 @@ export default function Profile() {
                                     <div className="w-[15rem]">
                                         <p className="w-[15rem] text-md ">Game: {review.rpg_title} </p>
                                         <p className="w-[18rem] text-sm "> {review.title}  </p>
-                                        
                                     </div>
-                                    {/* <p>{review.content} |</p> */}
-                                    <p className="text-2xl">|</p>
+                                    <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
                                     <p className="w-20">Score: {review.score}</p>
-                                    <p className="text-2xl">|</p>
-                                    <p className="w-28 ">{review.date_posted} </p>
-                                
+                                    <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
+                                    <p className="w-28 ">Date Posted:<br/> {review.date_posted} </p>
+                                    
     {/* Update Review  */}
                                     <Link to={`/updatereview/${review.id}`} key={review.id}>
                                         <button className="buttons w-20 align-middle">Edit</button>

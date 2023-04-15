@@ -1,7 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { DeleteReview } from "./reviews/DeleteReview";
 
 export default function Profile() {
     
@@ -63,7 +62,9 @@ export default function Profile() {
                                 <p className="w-28 ">{review.date_posted} </p>
                                
 {/* Update Review  */}
-                                <button className="buttons w-20 align-middle">Edit</button>
+                                <Link to={`/updatereview/${review.id}`} key={review.id}>
+                                    <button className="buttons w-20 align-middle">Edit</button>
+                                </Link>
 {/* Delete Review */}
                                 <Link to={`/deletereview/${review.id}`} key={review.id}>
                                     <button className="buttons w-20 align-middle" >Delete</button>

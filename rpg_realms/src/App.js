@@ -9,6 +9,7 @@ import Profile from './components/Profile';
 import RPGDetails from './components/RPGDetails';
 import CreateReview from './components/reviews/CreateReview';
 import DeleteReview from './components/reviews/DeleteReview';
+import UpdateReview from './components/reviews/UpdateReview';
 import Login from './components/Login/LogIn';
 import AllRPGs from './components/pages/AllRPGs';
 import FeaturedGame from './components/home/FeaturedGame';
@@ -16,6 +17,7 @@ import { DataContext } from './DataContext';
 import { useState } from 'react';
 import React from 'react';
 import './App.css';
+
 
 
 function App() {
@@ -44,6 +46,9 @@ function App() {
             <Route path="/allrpgs" element={<AllRPGs/>}/>
             <Route path="/createreview/:rpgId" element={<CreateReview/>}/>
             <Route path="/deletereview/:reviewId" element={<DeleteReview/>}/>
+            <Route path="/updatereview/:reviewId" element={<UpdateReview/>}/>
+
+
             
 
 

@@ -27,7 +27,7 @@ export default function Profile() {
         <div className="flex flex-wrap p-5 justify-center">
 {/* Account Information */}
             <div className="mx-5 mb-10">
-                <div className="bg-primary w-44 ml-5 text-white text-center rounded-t-2xl">Account Information</div>
+                <div className="w-52 ml-5 text-xl bg-primary  text-white text-center rounded-t-2xl">Account Information</div>
                     <div className="w-96 h-72 p-5 bg-white rounded-lg shadow-md shadow-slate-700">
                         <ul>
                             <li>Name 
@@ -43,7 +43,7 @@ export default function Profile() {
             </div>
 {/* Reviews */}
             <div className="mx-5">   
-                <div className="ml-5 bg-primary w-44 text-white text-center rounded-t-2xl ">My Reviews</div>  
+                <div className="ml-5 text-xl w-44 bg-primary  text-white text-center rounded-t-2xl ">My Reviews</div>  
                     <div className="   flex self-center flex-col   w-[70vw] p-5 bg-white rounded-lg shadow-md shadow-slate-700">
                         {user.reviews ? user.reviews.map((review) => (
                             <div className="shadow-sm shadow-slate-700 mb-2">

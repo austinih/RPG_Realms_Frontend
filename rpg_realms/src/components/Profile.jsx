@@ -48,29 +48,38 @@ export default function Profile() {
                 <div className="bg-primary w-44 text-white text-center rounded-t-2xl ">My Reviews</div>  
                     <div className="   flex self-center flex-col   w-[65vw] p-5 bg-white">
                         {user.reviews ? user.reviews.map((review) => (
-                            <div className="flex flex-row justify-around py-2 place-items-center border-solid border-b-2 border-b-black ">
-                                <img src={review.rpg_image} className="w-10"/>
-                                <div className="w-[15rem]">
-                                    <p className="w-[15rem] text-md ">Game: {review.rpg_title} </p>
-                                    <p className="w-[18rem] text-sm "> {review.title}  </p>
-                                    
-                                </div>
-                                {/* <p>{review.content} |</p> */}
-                                <p className="text-2xl">|</p>
-                                <p className="w-20">Score: {review.score}</p>
-                                <p className="text-2xl">|</p>
-                                <p className="w-28 ">{review.date_posted} </p>
-                               
-{/* Update Review  */}
-                                <Link to={`/updatereview/${review.id}`} key={review.id}>
-                                    <button className="buttons w-20 align-middle">Edit</button>
-                                </Link>
-{/* Delete Review */}
-                                <Link to={`/deletereview/${review.id}`} key={review.id}>
-                                    <button className="buttons w-20 align-middle" >Delete</button>
-                                </Link>
+                            <div>
+                            <details className=" py-2 my-2 mx-3">
+                                <summary className="
+                                    flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse">
+                                    <img src={review.rpg_image} className="w-10"/>
+                                    <div className="w-[15rem]">
+                                        <p className="w-[15rem] text-md ">Game: {review.rpg_title} </p>
+                                        <p className="w-[18rem] text-sm "> {review.title}  </p>
+                                        
+                                    </div>
+                                    {/* <p>{review.content} |</p> */}
+                                    <p className="text-2xl">|</p>
+                                    <p className="w-20">Score: {review.score}</p>
+                                    <p className="text-2xl">|</p>
+                                    <p className="w-28 ">{review.date_posted} </p>
                                 
+    {/* Update Review  */}
+                                    <Link to={`/updatereview/${review.id}`} key={review.id}>
+                                        <button className="buttons w-20 align-middle">Edit</button>
+                                    </Link>
+    {/* Delete Review */}
+                                    <Link to={`/deletereview/${review.id}`} key={review.id}>
+                                        <button className="buttons w-20 align-middle" >Delete</button>
+                                    </Link>
+                                </summary>
+                                    <div className="mx-5 mt-3 p-5  border-2 border-primary">
+                                        <p></p>
+                                        <p><span className="italic text-primary font-bold ">Review: </span>{review.content}</p>
+                                    </div>
 
+                            </details>
+                             <p className="border-solid border-b-2 border-b-black"></p>
                             </div>
                         )): <h2>No reviews found</h2>
                         }

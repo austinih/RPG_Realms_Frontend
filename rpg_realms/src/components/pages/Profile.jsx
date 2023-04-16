@@ -28,7 +28,7 @@ export default function Profile() {
 {/* Account Information */}
             <div className="mx-5 mb-10">
                 <div className="w-52 ml-5 text-xl bg-primary  text-white text-center rounded-t-2xl">Account Information</div>
-                    <div className="w-96 h-72 p-5 bg-white rounded-lg shadow-md shadow-slate-700">
+                    <div className="w-96 h-72 p-5 bg-white rounded-lg border-4 border-primary shadow-md shadow-slate-700">
                         <ul>
                             <li>Name 
                                 <div className="ml-8 my-1 px-3 py-1 w-72 rounded-3xl bg-primarycontainer text-surface">{user.name}</div>  
@@ -44,9 +44,9 @@ export default function Profile() {
 {/* Reviews */}
             <div className="mx-5">   
                 <div className="ml-5 text-xl w-44 bg-primary  text-white text-center rounded-t-2xl ">My Reviews</div>  
-                    <div className="   flex self-center flex-col   w-[70vw] p-5 bg-white rounded-lg shadow-md shadow-slate-700">
+                    <div className="   flex self-center flex-col   w-[70vw] p-5 bg-primarycontainer rounded-lg shadow-md shadow-slate-700">
                         {user.reviews ? user.reviews.map((review) => (
-                            <div className="shadow-sm shadow-slate-700 mb-2">
+                            <div className="shadow-sm bg-white shadow-slate-700 mb-2">
                             <details className=" py-2 my-2 mx-3 open:border-primary open:border-2">
                                 <summary className="
                                     flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse">

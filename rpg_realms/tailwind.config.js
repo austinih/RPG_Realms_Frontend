@@ -19,6 +19,9 @@ module.exports = {
         tertiarycontainer:'#BFE9F8',
         surface:  '#002111',
         lightsurface: '#F8F3F3',
+      },
+      backgroundImage: {
+        'tree': "url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')",
       }
     },
   },

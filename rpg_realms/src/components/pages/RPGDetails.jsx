@@ -43,7 +43,7 @@ export default function RPGDetails() {
                         {/* <p>{scores}</p> */}
                         <div className="px-5 py-3  ">
                             <h1 className="ml-5 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center">Full Description:</h1>
-                            <div className="pt-2 max-h-96 overflow-auto bg-white px-5 py-3 rounded-lg shadow-md shadow-slate-700">
+                            <div className="pt-2 max-h-96 overflow-auto bg-primarycontainer px-5 py-3 rounded-lg shadow-md shadow-slate-700">
                                 <p >{rpg.description}</p>
                                 <p className="float-right">---- Publisher Description</p>
                             </div>
@@ -54,7 +54,7 @@ export default function RPGDetails() {
 {/* Publisher Information */}
             <div className="my-5 pb-10 w-[75vw] mx-auto ">
                 <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center  ">Publisher</div>
-                <div className=" mx-8   self-center px-5 py-3 text-black bg-white flex flex-row   place-items-center rounded-lg shadow-md shadow-slate-700">
+                <div className=" mx-8   self-center px-5 py-3 text-black bg-primarycontainer flex flex-row   place-items-center rounded-lg shadow-md shadow-slate-700">
                     <img src={rpg.publisher_logo} className="w-20 ml-5"/>
                     <p className="ml-16">{rpg.publisher_name}</p>
                     <p className="ml-16 text-2xl border-r-2 border-black h-8"></p>
@@ -66,7 +66,7 @@ export default function RPGDetails() {
 {/* Reviews */}
             <div className="my-5 pb-10 w-[75vw] mx-auto ">
                 <div className="ml-12 py-1 w-44 bg-primary text-white  text-xl rounded-t-2xl  text-center ">Reviews</div>
-                <div className=" mx-8  flex self-center flex-col  px-8  bg-white rounded-lg shadow-md shadow-slate-700">
+                <div className=" mx-8  flex self-center flex-col  px-8  bg-primarycontainer rounded-lg shadow-md shadow-slate-700">
                     <div className=" p-2y my-2 mx-3 text-primary font-bold flex flex-row justify-around  place-items-center text-center underline">
                         <p className="-ml-2 w-16 text-center">Score </p>
                         <p className="w-[22rem] pl-5 "> Title  </p>
@@ -75,7 +75,7 @@ export default function RPGDetails() {
                     </div>
 {/* Map reviews */}
                     {rpg.reviews ? rpg.reviews.map((review) => (
-                        <div className="shadow-sm shadow-slate-700 mb-2">
+                        <div className="shadow-sm shadow-slate-700 mb-2 bg-white">
                             <details className=" py-2 my-2 mx-3 open:border-primary open:border-2" >
                                 <summary className="
                                         flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse ">

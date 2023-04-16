@@ -66,7 +66,7 @@ export default function UpdateReview() {
 
     return review ? (
        <div className="flex flex-wrap ">
-            <div className="w-[40vw] h-[72vh] m-auto rounded-2xl bg-white shadow-md shadow-slate-700  overflow-auto">
+            <div className="w-[40vw] h-[72vh] mx-auto mb-10 rounded-2xl bg-white border-4 border-primary shadow-md  shadow-slate-700  overflow-auto ">
                 <h1 className="text-3xl text-center mb-3 pt-3 text-primary font-bold">Current Reveiw</h1>
                 <div className=" w-[30vw]  px-8 pt-4 ">
                     <h2>Title:</h2>
@@ -86,7 +86,7 @@ export default function UpdateReview() {
                     </Link>
                 </div>
             </div>
-            <div className=" w-[40vw] h-[72vh] m-auto rounded-2xl bg-white shadow-md shadow-slate-700  overflow-auto">
+            <div className=" w-[40vw] h-[72vh] mx-auto mb-10 rounded-2xl bg-white shadow-md border-4 border-primary  shadow-slate-700  overflow-auto">
                 <h1 className="text-3xl text-center mb-3 pt-3 text-primary font-bold">New Review</h1>
                 <form className=" w-[30vw]  px-8 pt-4 " onSubmit={handleSubmit}>
                     <div>

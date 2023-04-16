@@ -13,7 +13,7 @@ export default function UpdateReview() {
     const [review, setReview] = useState({});
     const [updateForm, setUpdateForm] = useState([]);
     const [formValues, setFormValues] = useState({
-        rpg_id:"16",
+        rpg_id:"1",
         user_id: "2",
         date_posted: date,
         title: "",
@@ -21,16 +21,16 @@ export default function UpdateReview() {
         score: "",
     });
 
-    useEffect(() => {
-        const renderReview = async () => {
-            try {
-                const response = await axios.get(`http://localhost:8000/reviews/${reviewId}/`);
-                setReview(response.data);
-                console.log(response.data)
-            } catch (error) {}
-        };
-        renderReview();
-    }, []);
+    // useEffect(() => {
+    //     const renderReview = async () => {
+    //         try {
+    //             const response = await axios.get(`http://localhost:8000/reviews/${reviewId}/`);
+    //             setReview(response.data);
+    //             console.log(response.data)
+    //         } catch (error) {}
+    //     };
+    //     renderReview();
+    // }, []);
 
     const handleChange = (e) => {
         setFormValues({ ...formValues, [e.target.name]: e.target.value });

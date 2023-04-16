@@ -12,8 +12,25 @@ export default function UpdateReview() {
     const { reviewId } = useParams();
     const [review, setReview] = useState({});
     const [updateForm, setUpdateForm] = useState([]);
+    
+    
+
+    useEffect(() => {
+        const renderReview = async () => {
+            try {
+                const response = await axios.get(`http://localhost:8000/reviews/${reviewId}/`);
+                setReview(response.data);
+                console.log(response.data)
+            } catch (error) {}
+        };
+        renderReview();
+    }, []);
+
+    const rpgId = review.rpg_id
+
+
     const [formValues, setFormValues] = useState({
-        rpg_id:"1",
+        rpg_id: "",
         user_id: "2",
         date_posted: date,
         title: "",
@@ -21,25 +38,18 @@ export default function UpdateReview() {
         score: "",
     });
 
-    // useEffect(() => {
-    //     const renderReview = async () => {
-    //         try {
-    //             const response = await axios.get(`http://localhost:8000/reviews/${reviewId}/`);
-    //             setReview(response.data);
-    //             console.log(response.data)
-    //         } catch (error) {}
-    //     };
-    //     renderReview();
-    // }, []);
-
     const handleChange = (e) => {
+        console.log(rpgId)
         setFormValues({ ...formValues, [e.target.name]: e.target.value });
-        console.log(formValues)
+        // console.log(formValues)
+        // console.log(rpgId)
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        formValues.rpg_id = rpgId
         console.log(formValues)
+        
         const response = await axios.put(
             `http://localhost:8000/update-review/${reviewId}/`,
             formValues

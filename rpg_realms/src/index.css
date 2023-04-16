@@ -31,8 +31,12 @@
                 hover:rounded-md transition-all duration-300 ease-linear
     }
     .input-field {
-        @apply  w-96 ml-4 my-2 px-4 py-1 rounded-2xl
-                bg-primarycontainer text-surface 
+        @apply  w-[33vw] ml-4 mt-2 mb-6 px-4 py-1 rounded-2xl
+                bg-primarycontainer text-surface shadow-md shadow-slate-700
+    }
+    .review-review {
+        @apply  w-[33vw] ml-4 mt-2 mb-6 px-4 py-1 rounded-2xl border-2 border-primary border-solid 
+        shadow-md shadow-slate-700
     }
     .collapse_content {
         @apply  max-height: var(--collapse-height,0);

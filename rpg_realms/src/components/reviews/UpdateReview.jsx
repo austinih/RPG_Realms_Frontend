@@ -60,57 +60,80 @@ export default function UpdateReview() {
 
     };
 
+  
+
     
 
     return review ? (
-       
-        <div className="w-[65vw] h-[70vh] m-auto  bg-white shadow-md shadow-slate-300  overflow-auto">
-        <h1 className="text-3xl text-center mb-3 pt-3">New Review</h1>
-        <form className=" w-72  px-8 pt-4 " onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="title">Title:</label>
-                <input className="input-field"
-                    onChange={handleChange}
-                    name="title"
-                    type="text"
-                    placeholder="Type a title for your review..."
-                    value={formValues.title}
-                    required
-                />                   
+       <div className="flex flex-wrap ">
+            <div className="w-[40vw] h-[72vh] m-auto rounded-2xl bg-white shadow-md shadow-slate-700  overflow-auto">
+                <h1 className="text-3xl text-center mb-3 pt-3 text-primary font-bold">Current Reveiw</h1>
+                <div className=" w-[30vw]  px-8 pt-4 ">
+                    <h2>Title:</h2>
+                    <p className="review-review">{review.title}</p>
+                    <h2>Content:</h2>
+                    <p className="review-review h-[30vh] overflow-auto">{review.content}</p>
+                    <h2>Score:</h2>
+                    <p className="review-review">{review.score}</p>
+                    <Link to="/profile/">
+                        <button className="
+                            rounded-3xl bg-tertiary text-white 
+                            font-bold my-4 ml-4 px-4 py-1 shadow-md shadow-black
+                            hover:bg-tertiarycontainer   hover:text-surface 
+                            hover:w-96 hover:rounded-md transition-all duration-500 ease-linear">
+                            Keep Current
+                        </button>
+                    </Link>
+                </div>
             </div>
-            <div>
-                <label htmlFor="title">Content:</label>
-                <textarea className="input-field w-[55vw] h-[30vh] "
-                    onChange={handleChange}
-                    name="content"
-                    type="text"
-                    placeholder="Write the content of your review here..."
-                    value={formValues.content}
-                    required
-                />                   
+            <div className=" w-[40vw] h-[72vh] m-auto rounded-2xl bg-white shadow-md shadow-slate-700  overflow-auto">
+                <h1 className="text-3xl text-center mb-3 pt-3 text-primary font-bold">New Review</h1>
+                <form className=" w-[30vw]  px-8 pt-4 " onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="title">Title:</label>
+                        <input className="input-field " 
+                            onChange={handleChange}
+                            name="title"
+                            type="text"
+                            placeholder="Type a title for your review..."
+                            value={formValues.title}
+                            required
+                        />                   
+                    </div>
+                    <div>
+                        <label htmlFor="title">Content:</label>
+                        <textarea className="input-field  h-[30vh] "
+                            onChange={handleChange}
+                            name="content"
+                            type="text"
+                            placeholder="Write the content of your review here..."
+                            value={formValues.content}
+                            required
+                        />                   
+                    </div>
+                    <div>
+                        <label htmlFor="score">Score:</label>
+                        <input className="input-field "
+                            onChange={handleChange}
+                            name="score"
+                            type="integer"
+                            placeholder="Rate the game from 1-10..."
+                            value={formValues.score}
+                            required
+                        />                   
+                    </div>
+                    
+                    <button className="
+                        rounded-3xl bg-tertiary text-white 
+                        font-bold my-4 ml-4 px-4 py-1 shadow-md shadow-black
+                        hover:bg-tertiarycontainer   hover:text-surface 
+                        hover:w-96 hover:rounded-md transition-all duration-500 ease-linear">
+                        Submit Review
+                    </button>
+                    
+                </form>
             </div>
-            <div>
-                <label htmlFor="score">Score:</label>
-                <input className="input-field "
-                    onChange={handleChange}
-                    name="score"
-                    type="integer"
-                    placeholder="Rate the game from 1-10..."
-                    value={formValues.score}
-                    required
-                />                   
-            </div>
-            <div className="">
-                <button className="
-                    rounded-3xl bg-tertiary text-white 
-                    font-bold my-4 ml-4 px-4 py-1
-                    hover:bg-tertiarycontainer   hover:text-surface 
-                    hover:w-96 hover:rounded-md transition-all duration-500 ease-linear">
-                    Submit Review
-                </button>
-            </div>
-        </form>
-    </div>
+        </div>
     ) : <h1> Loading, Please Wait</h1>
 
 }

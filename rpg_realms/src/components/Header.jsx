@@ -8,7 +8,7 @@ export default function Header() {
        <div >
             <div className="w-screen h-16 flex flex-row items-center justify-between bg-primary text-white shadow-lg">
                 <Link to='/'>
-                    <h1 className='text-3xl mx-4'>RPG Realms</h1>
+                    <h1 className='text-3xl mx-7'>RPG Realms</h1>
                 </Link>
                 <Nav />
                 

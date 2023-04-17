@@ -17,18 +17,7 @@ export default function RPGDetails() {
         };
         renderRPG();
     }, []);
-
-    
-
-    // const CalculateScore = () => {
-    //     const scores = rpg.reviews.map((review)=>review.score)
-    //     navigate(`${index}`)
-    //     console.log(`${index}`)
-    // }
-    // const scores = rpg.reviews.map((review)=>review.score);
-    // const average = scores.reduce((totalScore, score) => totalScore + score, 0);
-    // const averageTotal = parseFloat((average / review.length).toFixed(2));
-    
+  
     return rpg ? (
        
        <div className="m-5">

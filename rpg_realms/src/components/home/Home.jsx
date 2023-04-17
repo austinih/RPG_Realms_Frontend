@@ -12,7 +12,7 @@ export default function Home() {
         <div className="mt-7 flex flex-wrap justify-center"> 
           <FeaturedGame rpgId="1"/>
           <FeaturedGame rpgId="13"/>
-          <FeaturedGame rpgId="2"/>
+          <FeaturedGame rpgId="10"/>
           <FeaturedGame rpgId="20"/>
         </div>
       </div>

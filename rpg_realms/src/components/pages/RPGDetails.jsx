@@ -37,13 +37,13 @@ export default function RPGDetails() {
                 <p className="text-center text-3xl">{rpg.title}</p>
                 <p className="text-center text-lg mb-5">From {rpg.publisher_name}</p>
                 <div className="p4 flex justify-center w-[80vw] mx-auto flex-wrap  ">
-                    <img src={rpg.image_url} className=" max-w-xs max-h-[50vh] mb-5 rounded-xl shadow-md shadow-slate-700"></img>
+                    <img src={rpg.image_url} className=" max-w-sm max-h-[52vh] mb-5 rounded-xl shadow-md shadow-slate-700"></img>
                     <div className="ml-5 max-w-xl">
                         
                         {/* <p>{scores}</p> */}
                         <div className="px-5 py-3  ">
                             <h1 className="ml-5 py-1 w-44 bg-primary text-white  text-xl italic rounded-t-2xl  text-center">Full Description:</h1>
-                            <div className="pt-2 max-h-96 overflow-auto bg-primarycontainer px-5 py-3 rounded-lg shadow-md shadow-slate-700">
+                            <div className="pt-2 max-h-[26rem] overflow-auto text-lg bg-primarycontainer px-5 py-3 rounded-lg shadow-md shadow-slate-700">
                                 <p >{rpg.description}</p>
                                 <p className="float-right">---- Publisher Description</p>
                             </div>
@@ -79,14 +79,14 @@ export default function RPGDetails() {
                             <details className=" py-2 my-2 mx-3 open:border-primary open:border-2" >
                                 <summary className="
                                         flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse ">
-                                    <p className="w-16 text-center">{review.score} </p>
+                                    <p className="w-16 text-center font-bold">{review.score} </p>
                                     <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
-                                    <p className="w-[22rem] pl-5 ">{review.title}  </p>
+                                    <p className="w-[22rem] pl-5 font-bold">{review.title}  </p>
                                     {/* <p>{review.content} |</p> */}
                                     <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
-                                    <p className="w-32 text-center">User </p>
+                                    <p className="w-32 text-center font-bold">{review.username} </p>
                                     <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
-                                    <p className="w-40 text-center">{review.date_posted} </p>                         
+                                    <p className="w-40 text-center font-bold">{review.date_posted} </p>                         
                                 </summary>
                                     {/* https://www.kindacode.com/article/tailwind-css-how-to-create-accordions-collapsible-content/ */}
                                 <div className="mx-5 mt-3 p-5">

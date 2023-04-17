@@ -15,7 +15,8 @@ export default function Header() {
             </div>
             <div className="w-screen h-14 flex flex-row items-center  bg-surface">
                 <div className="flex">
-                    <input className="mx-4 w-96 px-3 rounded-l-2xl"
+{/* Dynamic searchbar across whole site - in progress */}
+                    {/* <input className="mx-4 w-96 px-3 rounded-l-2xl"
                         type="text"
                         id="searchBar"
                         placeholder="RPG Search....."
@@ -24,7 +25,7 @@ export default function Header() {
                     />
                     <button className="px-3 py-2 -ml-4 rounded-r-2xl text-white bg-primary hover:bg-secondary hover:text-primary ">
                         {<FaSearch size="20"></FaSearch>}
-                    </button>
+                    </button> */}
                     <Link to='/allrpgs' className="game-filters" >
                         <button >All RPGs</button>
                     </Link >

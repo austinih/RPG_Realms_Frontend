@@ -22,9 +22,9 @@ export default function FeaturedGame(props) {
     
     return rpg ? (
        
-      <div className="mx-3 mb-10">
+      <div className="mx-5 mb-10">
         <div className="p-3 w-[35vw] ml-auto mr-auto flex flex-row justify-around bg-white shadow-md shadow-slate-700
-                    border-primary border-4">
+                    border-primary border-4 rounded-md hover:scale-110">
           <img className=" h-56  shadow-md shadow-slate-900" src={rpg.image_url} ></img>
           <div className="flex flex-col ">
             <h3 className="text-3xl mb-3 font-bold underline underline-primary">{rpg.title}</h3>

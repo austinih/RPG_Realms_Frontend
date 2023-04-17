@@ -11,7 +11,9 @@ export default function Home() {
         <h1 className=" bg-primary text-white text-lg italic -ml-3 mb-5 py-3 px-10 w-52 rounded-r-3xl">Featured RPGs</h1>
         <div className="mt-7 flex flex-wrap justify-center"> 
           <FeaturedGame rpgId="1"/>
+          <FeaturedGame rpgId="13"/>
           <FeaturedGame rpgId="2"/>
+          <FeaturedGame rpgId="20"/>
         </div>
       </div>
         

@@ -50,15 +50,15 @@ export default function Profile() {
                             <details className=" py-2 my-2 mx-3 open:border-primary open:border-2">
                                 <summary className="
                                     flex flex-row justify-around  place-items-center  cursor-pointer hover:rounded-md border-collapse">
-                                    <img src={review.rpg_image} className="w-10"/>
+                                    <img src={review.rpg_image} className="w-16"/>
                                     <div className="w-[15rem]">
-                                        <p className="w-[15rem] text-md ">Game: {review.rpg_title} </p>
-                                        <p className="w-[18rem] text-sm "> {review.title}  </p>
+                                        <p className="w-[15rem] text-md "><span className="text-primary italic font-bold">Game:</span> {review.rpg_title} </p>
+                                        <p className="w-[18rem] text-sm "><span className="text-primary italic font-bold">Title:</span> {review.title}  </p>
                                     </div>
                                     <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
-                                    <p className="w-20">Score: {review.score}</p>
+                                    <p className="w-20"><span className="text-primary italic font-bold">Score:</span> {review.score}</p>
                                     <p className="ml-5 text-2xl border-r-2 border-black h-8"></p>
-                                    <p className="w-28 ">Date Posted:<br/> {review.date_posted} </p>
+                                    <p className="w-28 "><span className="text-primary italic font-bold">Date Posted:</span><br/> {review.date_posted} </p>
                                     
     {/* Update Review  */}
                                     <Link to={`/updatereview/${review.id}`} key={review.id}>

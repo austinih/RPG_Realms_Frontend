@@ -29,13 +29,13 @@ function App() {
 
 
   return (
-    <div className='bg-greenabstract bg-cover' >
+    <div className='bg-blueabstract bg-cover' >
       <DataContext.Provider value={{ chosenRPG, setChosenRPG }}>
         <header >
           <Header/>
 
         </header>
-        <main className='mx-32 my-5 min-h-[70vh]  pb-5 bg-white shadow-md shadow-slate-700'>
+        <main className='mx-32 mt-5 mb-10 min-h-[70vh]  pb-5 bg-white shadow-md shadow-slate-700 rounded-md'>
         <br></br>
           <Routes>
             <Route path="/" element={<Home/>} />

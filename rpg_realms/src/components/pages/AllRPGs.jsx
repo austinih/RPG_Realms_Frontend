@@ -62,7 +62,7 @@ export default function AllRPGs() {
         <div >
             
             <div className="flex ">
-                <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 rounded-r-3xl">Explore 
+                <h1 className=" bg-primary text-white text-lg italic -ml-3 py-3 px-10 w-56 rounded-r-3xl">Explore 
                     All RPGs
                 </h1>
                 {/* Search Bar */}
@@ -82,7 +82,7 @@ export default function AllRPGs() {
                     </button>
                 </div>
                 {/* The h1 below is there purely to allow the search bar to be center screen */}
-                <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-52 -mr-3 opacity-0">Explore All RPGs</h1>
+                <h1 className=" bg-primary text-white -ml-3 py-3 px-10 w-56 -mr-3 opacity-0">Explore All RPGs</h1>
             </div>
             <div className="flex flex-wrap justify-center ">
                 {filteredRPGs.map((rpg)=> (

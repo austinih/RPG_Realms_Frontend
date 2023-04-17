@@ -17,7 +17,7 @@ export default function Login() {
     
     return(
        
-       <div className="w-[40vw] m-auto px-5 pb-16 pt-5 bg-white border-4 border-primary rounded-xl shadow-md shadow-slate-300 " >
+       <div className="w-[40vw] m-auto px-5 pb-16 pt-5 bg-white border-4 border-primary rounded-xl shadow-md shadow-slate-700 " >
             <h1 className="text-3xl text-center mb-3 pt-3">Log In</h1>
             <form className="w-[36vw] h-56 p-4 ">
                 <div>

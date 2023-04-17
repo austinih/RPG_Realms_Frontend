@@ -48,7 +48,7 @@ export default function CreateReview() {
 
     return(
        
-       <div className="w-[65vw] h-[70vh] m-auto  bg-white shadow-md shadow-slate-300  overflow-auto">
+       <div className="w-[40vw] h-[72vh] mx-auto mb-10 rounded-2xl bg-white shadow-md border-4 border-primary  shadow-slate-700  overflow-auto">
             <h1 className="text-3xl text-center mb-3 pt-3">New Review</h1>
             <form className=" w-72  px-8 pt-4 " onSubmit={handleSubmit}>
                 <div>
@@ -64,7 +64,7 @@ export default function CreateReview() {
                 </div>
                 <div>
                     <label htmlFor="title">Content:</label>
-                    <textarea className="input-field w-[55vw] h-[30vh] "
+                    <textarea className="input-field h-[30vh] "
                         onChange={handleChange}
                         name="content"
                         type="text"

@@ -105,7 +105,9 @@ export default function RPGDetails() {
                     }
 {/* Create Review Button */}
                     <Link to={`/createreview/${rpg.id}`} key={rpg.id} className=" mt-2 mx-auto">
-                        <button className=" rounded-t-2xl w-56  bg-secondary text-primary  hover:text-white hover:h-10 hover:w-96 transition-all duration-300 ease-linear hover:font-bold hover:text-lg hover:rounded-t-md ">+ Review</button>
+                        <button className=" rounded-t-2xl w-56  bg-secondary text-primary
+                        border-2 border-primary border-b-0 hover:border-white
+                        hover:text-white hover:h-10 hover:w-96 transition-all duration-300 ease-linear hover:font-bold hover:text-lg hover:rounded-t-md ">+ Review</button>
                     </Link>
                 </div>
             </div>

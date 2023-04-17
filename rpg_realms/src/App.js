@@ -29,7 +29,7 @@ function App() {
 
 
   return (
-    <div className='bg-blueabstract bg-cover' >
+    <div className='bg-blueabstract bg-cover font-MedievalSharp' >
       <DataContext.Provider value={{ chosenRPG, setChosenRPG }}>
         <header >
           <Header/>
